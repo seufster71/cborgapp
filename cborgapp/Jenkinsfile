@@ -47,8 +47,9 @@ node {
         sh 'mvn clean package -DskipTests'
     }
     
-    stage 'move to deploy area'
+   	stage 'move to deploy area'
     def workspace = pwd()
     echo "work space ${workspace}"
-    sh "cp ${workspace}/cborgapp/target/cborgapp-1.0-SNAPSHOT.jar /opt/software"
+    sh "cp ${workspace}/cborgapp/target/cborgapp-1.0-SNAPSHOT.jar /opt/software"  
+   
 }
