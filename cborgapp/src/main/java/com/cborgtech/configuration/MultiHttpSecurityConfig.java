@@ -50,6 +50,7 @@ public class MultiHttpSecurityConfig {
 					.antMatchers("/api/public/**","/api/login/**").permitAll()
 					.antMatchers("/api/member/**").hasAuthority("MEMBER")
 					.antMatchers("/api/admin/**").hasAuthority("ADMIN")
+					.antMatchers("/api/system/**").hasAuthority("SYSTEM")
 					.anyRequest().authenticated();
 		}
 	}
